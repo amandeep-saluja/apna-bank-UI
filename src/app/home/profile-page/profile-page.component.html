@@ -1,0 +1,43 @@
+<div class="profile-data-table row">
+    <mat-card class="example-card offset-md-4 col-md-4">
+        <mat-card-header class="justify-content-around">
+            <button mat-icon-button (click)="goBack()" class="back-btn">
+                <mat-icon svgIcon="back-arrow" aria-hidden="false" aria-label="go back icon"></mat-icon>
+            </button>
+            <mat-card-title class="title">{{profile.name}}</mat-card-title>
+            <mat-card-subtitle class="subtitle">{{profile.address}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+            <table>
+                <tr>
+                    <th>Date of birth</th>
+                    <td>{{profile.dateOfBirth}}</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>{{profile.gender}}</td>
+                </tr>
+                <tr>
+                    <th>Email Id</th>
+                    <td>{{profile.emailId}}</td>
+                </tr>
+                <tr>
+                    <th>Phone no</th>
+                    <td>{{profile.phoneNo | formatNumber:3}}</td>
+                </tr>
+                <tr>
+                    <th>Joined at</th>
+                    <td>{{profile.joiningDate | date}}</td>
+                </tr>
+                <tr>
+                    <th>Aadhaar Id</th>
+                    <td>{{profile.aadharId | formatNumber}}</td>
+                </tr>
+                <tr>
+                    <th>Account</th>
+                    <td>{{profile.account.active ? 'ACTIVE' : 'INACTIVE'}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>

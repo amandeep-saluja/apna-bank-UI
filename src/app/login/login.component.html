@@ -1,15 +1,36 @@
-<div class="login-form">
-    <mat-form-field appearance="outline">
-        <mat-label>Phone no</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-    </mat-form-field>
+<div class="login-page row">
+    <mat-card class="example-card offset-md-4 col-md-4">
+        <mat-card-header class="d-flex justify-content-center">
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="login-form" [formGroup]="loginForm">        
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone no</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="phoneNo">
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                    <!-- <input matInput [type]="hide ? 'password' : 'text'"> -->
+                    <!-- <button mat-icon-button 
+                            matSuffix 
+                            (click)="toggleHide()" 
+                            [attr.aria-label]="'Hide password'" 
+                            [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button> -->
+                </mat-form-field>
+                <mat-radio-group aria-label="Select an option" class="user-role-radio" formControlName="userRole">
+                    <mat-radio-button value="EMPLOYEE">Employee</mat-radio-button>
+                    <mat-radio-button value="CUSTOMER">Customer</mat-radio-button>
+                </mat-radio-group>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-stretch mx-2">
+            <button mat-raised-button class="flex-fill" color="primary" (click)="submit()">Login</button>
+        </mat-card-actions>
+    </mat-card>
+    <!-- <div class="offset-md-4"></div> -->
 </div>

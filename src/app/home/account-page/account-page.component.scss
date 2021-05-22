@@ -1,0 +1,35 @@
+::ng-deep .account-data-table {
+    text-align: center; 
+
+    // mat-card:hover {
+    //     transform: rotateY(360deg);
+    //     transition: 8s all;
+    //     transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+    // }
+
+    mat-card-header .mat-card-header-text {
+        flex: 1 0 auto;
+        padding-right: 25px;
+    }
+
+    .back-btn {
+        order: -20;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    table {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+
+        tr {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+    }
+}

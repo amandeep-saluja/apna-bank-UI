@@ -1,5 +1,23 @@
-.login-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+.login-page {
+
+    margin-top: 50px;
+    // height: 100vh;
+    // background-image: url('../../assets/imgs/bank_building.jpg');
+    // background-size: cover;
+    // background-position: center;
+
+    .example-card {
+        margin-top: 150px;
+    }
+
+    .user-role-radio {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }
