@@ -14,6 +14,11 @@ export class LoginService {
 
     constructor(private http: HttpClient) { }
 
+    /**
+     * Method to login user into application
+     * @param credentials object of Login
+     * @returns Promise of user data object
+     */
     login(credentials:Login): Promise<any> {
         let url:string = "http://localhost:8009/login";
         let httpHeaders: HttpHeaders = new HttpHeaders({
@@ -31,11 +36,18 @@ export class LoginService {
         });
     }
 
+    /**
+     * Method to set user data in local storage
+     */
     setDataToLocalStorage() {
         localStorage.setItem('token', JSON.stringify(this.user.value));
     }
 
-    getDataFromLocalStorage() {
+    /**
+     * Method to get user data from local storage
+     * @returns return object of user data
+     */
+    getDataFromLocalStorage():object {
         return JSON.parse(localStorage.getItem('token'));
     }
 }

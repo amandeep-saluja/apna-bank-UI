@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
 import { FormatNumberPipe } from './format-number.pipe';
+import { AuthGuardService } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { FormatNumberPipe } from './format-number.pipe';
     HomeModule
   ],
   exports: [MatFormFieldModule],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
